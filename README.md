@@ -1,7 +1,6 @@
 # Secret Santa
 
 Check it live on [dylanfranks.net/secretsanta](https://dylanfranks.net/secretsanta) 🎄
-
 <br/>
 
 ## License (MIT)
