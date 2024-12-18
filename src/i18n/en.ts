@@ -16,7 +16,7 @@ export const en = {
     line: "Line {{number}}"
   },
   home: {
-    vanity: "Project started in winter 2015 by Maël",
+    vanity: "Open Source Fork",
     sponsor: "Support me on GitHub",
     title: "Secret Santa Planner",
     explanation: [
@@ -35,7 +35,7 @@ export const en = {
   },
   participants: {
     title: "Participants",
-    generationWarning: "Important: Any change made to the participant list or settings will require creating new pairings. Existing links won't be retroactively modified.", 
+    generationWarning: "Important: Any change made to the participant list or settings will require creating new pairings. Existing links won't be retroactively modified.",
     addPerson: "Add Person",
     generatePairs: "Generate Pairings",
     enterName: "Enter participant name",

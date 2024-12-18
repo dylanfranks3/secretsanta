@@ -1,7 +1,5 @@
 # Secret Santa
 
-<img align="right" height="160" src="https://user-images.githubusercontent.com/1037931/87014534-92e21280-c1cc-11ea-9675-5f2c0f3c287f.png"/>
-
 Check it live on [dylanfranks.net/secretsanta](https://dylanfranks.net/secretsanta) 🎄
 
 <br/>

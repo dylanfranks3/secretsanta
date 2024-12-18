@@ -34,9 +34,9 @@ function migrateParticipants(value: any) {
       migrated[id] = {
         id,
         name: participant.name,
-        rules: participant.rules.map(({type, targetParticipant}: {type: string, targetParticipant: string}) => {
+        rules: participant.rules.map(({ type, targetParticipant }: { type: string, targetParticipant: string }) => {
           const targetParticipantId = ids.get(targetParticipant);
-          return targetParticipantId ? {type, targetParticipantId} : null;
+          return targetParticipantId ? { type, targetParticipantId } : null;
         }).filter((rule: any): rule is Rule => {
           return !!rule;
         }),
@@ -60,16 +60,16 @@ function migrateAssignments(value: any) {
     console.log({
       hash: ``,
       pairings: value.map(([giver, receiver]) => ({
-        giver: {id: ``, name: giver},
-        receiver: {id: ``, name: receiver},
+        giver: { id: ``, name: giver },
+        receiver: { id: ``, name: receiver },
       })),
     });
 
     return {
       hash: ``,
       pairings: value.map(([giver, receiver]) => ({
-        giver: {id: ``, name: giver},
-        receiver: {id: ``, name: receiver},
+        giver: { id: ``, name: giver },
+        receiver: { id: ``, name: receiver },
       })),
     };
   }
@@ -92,7 +92,7 @@ export function Home() {
   const handleGeneratePairs = () => {
     const assignments = generatePairs(participants);
     if (assignments === null) {
-      alert(Object.keys(participants).length < 2 
+      alert(Object.keys(participants).length < 2
         ? t('errors.needMoreParticipants')
         : t('errors.invalidPairs')
       );
@@ -105,7 +105,7 @@ export function Home() {
 
   const menuItems = [
     <div className="flex flex-col space-y-2 lg:flex-row lg:space-y-0 lg:space-x-2">
-      <MenuItem key={`vanity`} to="https://bsky.app/profile/mael.dev" icon={<Star className={`text-orange-500`} weight={`fill`}/>}>
+      <MenuItem key={`vanity`} to="https://github.com/dylanfranks3/secretsanta" icon={<Star className={`text-orange-500`} weight={`fill`} />}>
         {t(`home.vanity`)}
       </MenuItem>
     </div>,
@@ -137,9 +137,9 @@ export function Home() {
                 <Trans
                   i18nKey="home.explanation"
                   components={{
-                    p: <p/>,
-                    githubLink: <a className="text-blue-500 underline" href="https://github.com/arcanis/secretsanta/" target="_blank"/>,
-                    exampleLink: <Link className="text-blue-500 underline" to="/pairing?from=Simba&to=c1w%2FUV9lXC12U578BHPYZhXxhsK0fPTqoQDU9CA7W581P%2BM%3D"/>,
+                    p: <p />,
+                    githubLink: <a className="text-blue-500 underline" href="https://github.com/arcanis/secretsanta/" target="_blank" />,
+                    exampleLink: <Link className="text-blue-500 underline" to="/pairing?from=Simba&to=c1w%2FUV9lXC12U578BHPYZhXxhsK0fPTqoQDU9CA7W581P%2BM%3D" />,
                   }}
                 />
               </div>
